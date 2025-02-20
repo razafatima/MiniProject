@@ -16,7 +16,7 @@ export default function landingpage() {
         <Banners />
         <Footer/>
         
-        <div class={styles.parentcontainer}>
+        <div className={styles.parentcontainer}>
           <button className={styles.iconbutton}>
             <img src={Images.steeringwheel} alt="steering wheel" className={styles.wheelicon}/>
             <h5 className={styles.heading}>Schedule a Drive Today</h5>

@@ -250,17 +250,23 @@ html, body {
   }
 }
 
-.buttonContainer{
+/* .btn{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   position: absolute;
-  top: 55%;
-  left: 20px;
+  top: 70%;
+  left: 50%;
   width: 100%;
-}
-.btnordernow {
+} */
+.primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 25%;
   background-color: #3e6ae1;
   color: #fff;
   border: none;
@@ -271,7 +277,13 @@ html, body {
   height: 40px;
   font-weight: bold;
 }
-.btnlearnmore {
+.secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   background-color: #fff;
   color: #000;
   border: none;
