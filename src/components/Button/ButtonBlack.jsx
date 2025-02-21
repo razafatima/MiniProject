@@ -1,13 +1,9 @@
 import styles from '../styled/styled.module.css'
 
-const Button = ({style}) =>{
+const Button = ({button, text}) =>{
     return(
-     
-        <div className={styles.buttonContainer} style={style}>
-            <button className={styles.ordernow}>Order Now</button>
-            <button className={styles.learnmore}>Learn More</button>
-        </div>
-
+      
+        <button className={`${button ? styles.order : styles.learnmore}`}>{text}</button>
     );
 };
 export default Button;

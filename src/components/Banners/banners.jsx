@@ -1,43 +1,68 @@
 import { Fragment } from "react";
 import styles from '../styled/styled.module.css'
 import Images from '../landingpage/imagesdata'
-import Button from "../Button/Button"; 
-import ButtonBlack from '../Button/ButtonBlack'
+// import ButtonBlack from '../Button/ButtonBlack'
+import Buttongroup from "../Button/buttongroup";
+import Blackbtngroup from '../Button/blackbtngroup';
+// import banner from '../Banners/banner';
 
-const banners = () =>{
+
+const Banners = ({image, title, link, subText}) =>{
+
+
  
     return(
             <Fragment>
               <div className={styles.imgContainer}>  
-              <img src={Images.frontbanner} alt="firstbanner" className={styles.img}/>
+              {/* <img src={Images.frontbanner} alt="firstbanner" className={styles.img}/>
               <h1>Model Y</h1>
               <a href="#leasing" className={styles.leasing}>$299/mo Leasing</a>
-              <h4 className={styles.bannertext}>From $31,490<sup>1</sup>After Est. Savings</h4>
-              <Button btns>Order Now</Button>
-              <Button>Learn More</Button>
+              <h4 className={styles.bannertext}>From $31,490<sup>1</sup>After Est. Savings</h4> */}
+              <img 
+              src={image}
+              alt={title}
+              className={styles.img}/>
+              <h1>{title}</h1>
+              {link && (
+                <a href={link.href} className={styles.leasing}>
+                  {link.text}
+                </a>
+              )}
+              {subText && (
+                <h4 className={styles.bannertext}>
+                  {subText.text}
+                  {subText.supText && <sup>{subText.supText}</sup>}
+                  {subText.afterText}
+                </h4>
+
+              )}
+              <Buttongroup btns/>
+               <Buttongroup />
           </div>
 
           <div className={styles.imgContainer}>
               <img src={Images.secondbanner} alt="secondbanner" className={styles.img}/>
               <h1 style={{ fontSize: '60px' }}>New Model Y</h1>
               <h3>Deliveries Begin in March</h3>
-              <Button btns>Order Now</Button>
-              <Button>Learn More</Button>
+              <Buttongroup btns />
+              <Buttongroup />
           </div>
 
           <div className={styles.imgContainer}>
             <img src={Images.thirdbanner} alt="thirdbanner" className={styles.img}/>
             <h1>Model 3</h1>
             <a href="#lease" className={styles.lease}>$249/mo Lease Ending March 3</a>
-            {/* <Button style={{top: '80%'}}/> */}
+            <Buttongroup btns />
+              <Buttongroup />
           </div>
 
           <div className={styles.imgContainer}>
             <img src={Images.fourthbanner} alt="fourthbanner" className={styles.img}/>
             <img src={Images.cybertruck} alt="cybertruck" className={styles.cybertruck}/>
             <h3 style={{top: '30%'}}>$7,500 Federal Tax Credit Available</h3>
-            <ButtonBlack style={{top: '85%'}} />
             <a href={"#text"} className={styles.textleasing}>$749/mo Leasing</a>
+            <Blackbtngroup button/>
+            <Blackbtngroup />
           </div>
 
           <div className={styles.imgContainer}>
@@ -45,7 +70,8 @@ const banners = () =>{
             <h1>Model X</h1>
             <h3>Free Supercharging Included</h3>
             <a href={"#text"} className={styles.textlease}>$1,149/mo Leasing</a>
-            {/* <Button style={{top: '85%'}}/> */}
+            <Buttongroup btns />
+            <Buttongroup />
           </div>
 
           <div className={styles.imgContainer}>
@@ -53,33 +79,38 @@ const banners = () =>{
             <h1>Model S</h1>
             <h3>Free Supercharging Included</h3>
             <a href={"#text"} className={styles.textlease1}>$998/mo Leasing</a>
-            {/* <Button style={{top: '85%'}}/> */}
+            <Buttongroup btns />
+            <Buttongroup />
           </div>
 
           <div className={styles.imgContainer}>
             <img src={Images.houseimg} alt="houseimg" className={styles.img}/>
             <h1>Solar Panels</h1>
             <a href={"#text"} className={styles.textsolar}>Schedule a Virtual Consultation</a>
-            {/* <Button style={{top: '85%'}}/> */}
+            <Buttongroup btns />
+            <Buttongroup />
           </div>
 
           <div className={styles.imgContainer}>
             <img src={Images.solarroof} alt="solarroof" className={styles.img}/>
             <h1>Solar Roof</h1>
             <h3 className={styles.textsolarroof}>Produce Clean Energy From Your Roof</h3>
-            {/* <Button style={{top: '85%'}}/> */}
+            <Buttongroup btns />
+            <Buttongroup />
           </div>
 
           <div className={styles.imgContainer}>
             <img src={Images.powerwall} alt="powerwall" className={styles.img}/>
             <h1>Powerwall</h1>
-            {/* <Button style={{top: '85%'}}/> */}
+            <Buttongroup btns />
+            <Buttongroup />
           </div>
 
           <div className={styles.imgContainer}>
             <img src={Images.accessories} alt="accessories" className={styles.img}/>
             <h1>Accessories</h1>
-            {/* <Button style={{top: '85%'}}/> */}
+            <Buttongroup btns />
+            <Buttongroup />
 
           </div>
 
@@ -105,4 +136,4 @@ const banners = () =>{
             </Fragment>
     );
 };
-export default banners; 
+export default Banners; 
