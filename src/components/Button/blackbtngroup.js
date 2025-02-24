@@ -1,5 +1,5 @@
-import buttons from '../Button/databutton';
-import BlackButtom from '../Button/ButtonBlack';
+import buttons from './databutton';
+import BlackButtom from './ButtonBlack';
 
 const Blackbtngroup = () =>{
     return(
